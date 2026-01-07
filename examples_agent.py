@@ -6,11 +6,10 @@
 from agent import MultiSkillAgent, Skill
 
 # Importer les skills depuis le dossier agent_skills
-from agent_skills.weather_skill import create_weather_skill
-from agent_skills.booking_skill import create_booking_skill
 from agent_skills.audio_skill import create_audio_skill
 from agent_skills.file_skill import create_file_skill
-""" from agent_skills.calendar_skill import create_calendar_skill """
+from agent_skills.calendar_skill_ics import create_calendar_skill
+from agent_skills.email_skill import create_email_skill
 
 # =========================
 # Construction de l'agent
@@ -18,11 +17,10 @@ from agent_skills.file_skill import create_file_skill
 
 def build_agent() -> MultiSkillAgent:
     # Créer les skills en utilisant les fonctions importées
-    weather_skill = create_weather_skill()
-    booking_skill = create_booking_skill()
     audio_skill = create_audio_skill()
     file_skill = create_file_skill()
-    """ calendar_skill = create_calendar_skill() """
+    calendar_skill = create_calendar_skill()
+    email_skill = create_email_skill()
 
     # Skill smalltalk (pas de slots)
     smalltalk_skill = Skill(
@@ -36,7 +34,7 @@ Réponds naturellement en français, de façon sympathique et concise.
         on_ready=None,
     )
 
-    return MultiSkillAgent([weather_skill, booking_skill, audio_skill, file_skill ,smalltalk_skill])
+    return MultiSkillAgent([audio_skill, file_skill, calendar_skill, email_skill, smalltalk_skill])
 
 
 # =========================
@@ -46,7 +44,7 @@ Réponds naturellement en français, de façon sympathique et concise.
 def main():
     agent = build_agent()
     print("Assistant: Salut !")
-    print("Tu peux me parler météo, réservation de resto, jouer un audio, creer un fichier, manager ton calendrier ou juste discuter.")
+    print("Tu peux me demander de jouer un audio, créer un fichier, gérer ton calendrier, consulter tes emails ou juste discuter.")
     print("Tape 'quit' pour arrêter, ou 'reset' pour annuler une demande en cours.\n")
 
     while True:

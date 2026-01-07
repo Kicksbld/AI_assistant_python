@@ -1,0 +1,76 @@
+{
+  "emails": [
+    {
+      "id": "email_001",
+      "from": "prof.martin@university.fr",
+      "from_name": "Prof. Martin",
+      "subject": "Rappel rendu TP Agent Conversationnel",
+      "date": "2026-01-07 09:30",
+      "body": "Bonjour,\n\nJe vous rappelle que le rendu du TP sur les agents conversationnels est prévu pour vendredi 10 janvier à 23h59. N'oubliez pas d'inclure:\n- Le code source complet\n- Un fichier README avec les instructions d'installation\n- Un rapport de 2-3 pages expliquant votre architecture\n\nSi vous avez des questions, n'hésitez pas.\n\nCordialement,\nProf. Martin",
+      "read": false
+    },
+    {
+      "id": "email_002",
+      "from": "scolarite@university.fr",
+      "from_name": "Service Scolarité",
+      "subject": "Planning des examens - Session janvier 2026",
+      "date": "2026-01-06 14:20",
+      "body": "Chers étudiants,\n\nVoici le planning des examens pour la session de janvier 2026:\n\n- 15/01: Intelligence Artificielle (9h-12h, Amphi A)\n- 17/01: Bases de données avancées (14h-17h, Amphi B)\n- 20/01: Systèmes distribués (9h-12h, Amphi A)\n\nMerci de vous présenter 15 minutes avant le début de l'épreuve avec votre carte d'étudiant.\n\nBonne chance à tous!",
+      "read": false
+    },
+    {
+      "id": "email_003",
+      "from": "marie.dupont@gmail.com",
+      "from_name": "Marie",
+      "subject": "Re: Weekend prochain ?",
+      "date": "2026-01-05 18:45",
+      "body": "Salut !\n\nOui super idée pour samedi ! Je propose qu'on se retrouve vers 14h au parc pour faire un foot, et après on peut aller manger quelque chose en ville.\n\nTu peux demander à Thomas et Lucas s'ils sont dispos ?\n\nÀ samedi !\nMarie",
+      "read": true
+    },
+    {
+      "id": "email_004",
+      "from": "newsletter@techcrunch.com",
+      "from_name": "TechCrunch",
+      "subject": "🚀 Les actus tech de la semaine",
+      "date": "2026-01-05 08:00",
+      "body": "Votre résumé tech hebdomadaire:\n\n📱 Apple annonce de nouvelles fonctionnalités IA pour Siri\n🤖 OpenAI lance GPT-5 avec des capacités de raisonnement améliorées\n💻 Google dévoile sa nouvelle puce Tensor G5\n🔋 Tesla bat des records de production au Q4 2025\n\nCliquez pour lire les articles complets...",
+      "read": false
+    },
+    {
+      "id": "email_005",
+      "from": "security@amazon.fr",
+      "from_name": "Amazon Sécurité",
+      "subject": "Activité inhabituelle détectée sur votre compte",
+      "date": "2026-01-04 22:15",
+      "body": "Bonjour,\n\nNous avons détecté une tentative de connexion à votre compte Amazon depuis un nouvel appareil (iPhone, Paris).\n\nSi c'était vous, aucune action n'est nécessaire. Sinon, nous vous recommandons de:\n1. Changer immédiatement votre mot de passe\n2. Activer la vérification en deux étapes\n\nPour sécuriser votre compte, cliquez ici.\n\nL'équipe Amazon",
+      "read": true
+    },
+    {
+      "id": "email_006",
+      "from": "papa@gmail.com",
+      "from_name": "Papa",
+      "subject": "Anniversaire de Mamie - 25 janvier",
+      "date": "2026-01-03 19:30",
+      "body": "Salut,\n\nPetit rappel que l'anniversaire de Mamie est le 25 janvier. On organise une fête surprise chez elle à 15h.\n\nEst-ce que tu peux venir ? Et si oui, tu peux apporter le gâteau ? Mamie adore les fraisiers.\n\nTiens-moi au courant avant le 15 pour qu'on organise.\n\nBises,\nPapa",
+      "read": false
+    },
+    {
+      "id": "email_007",
+      "from": "thomas.bernard@university.fr",
+      "from_name": "Thomas Bernard",
+      "subject": "Projet IA - Réunion mercredi ?",
+      "date": "2026-01-02 16:20",
+      "body": "Salut,\n\nJ'ai avancé sur la partie classification du projet d'IA. J'ai réussi à obtenir 94% de précision avec un ResNet50 pré-entraîné.\n\nOn peut se voir mercredi après-midi pour faire le point ? Je pense qu'on peut commencer à rédiger le rapport si la partie NLP est aussi terminée de ton côté.\n\nDis-moi si 14h te va ?\n\nThomas",
+      "read": false
+    },
+    {
+      "id": "email_008",
+      "from": "noreply@laposte.fr",
+      "from_name": "La Poste",
+      "subject": "Votre colis arrive demain",
+      "date": "2026-01-02 11:45",
+      "body": "Bonjour,\n\nVotre colis n° 6Z89475329 sera livré demain (3 janvier) entre 9h et 13h.\n\nVous pouvez suivre votre livraison en temps réel via notre application mobile.\n\nSi vous êtes absent, le colis sera déposé en point relais.\n\nCordialement,\nLa Poste",
+      "read": true
+    }
+  ]
+}

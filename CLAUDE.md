@@ -14,16 +14,23 @@ The class assignment requires implementing these four core functionalities:
 
 1. ✅ **Play audio file** - Implemented in `audio_skill.py` using pygame
 2. ✅ **Create text file** - Implemented in `file_skill.py`
-3. ⚠️ **Calendar management** - Implemented in `calendar_skill.py` but currently commented out in `examples_agent.py`
+3. ✅ **Calendar management** - Implemented in `calendar_skill_ics.py` using ICS format
    - Add/Remove/Edit/List calendar events
-4. ❌ **Email retrieval and synthesis** - Not yet implemented (should be simulated)
-   - Retrieve emails and synthesize/summarize them
+   - Industry-standard iCalendar format (RFC 5545)
+   - Compatible with Google Calendar, Apple Calendar, Outlook
+4. ✅ **Email retrieval and synthesis** - Implemented in `email_skill.py` (simulated)
+   - List/Read/Synthesize email operations
+   - LLM-powered intelligent summarization
 
 Note: The exercise uses simulated/mock implementations rather than real integrations.
 
 ## Running the Agent
 
-Start the local LLaMA server first (it should be running on `http://localhost:8080/v1/chat/completions`), then:
+Start the local LLaMA server first with 
+
+llama-server -hf unsloth/Qwen3-0.6B-GGUF:Q4_K_M 
+
+(it should be running on `http://localhost:8080/v1/chat/completions`), then:
 
 ```bash
 python examples_agent.py
@@ -61,11 +68,16 @@ Each skill is a separate module that exports a `create_*_skill()` function retur
 - **on_ready**: Optional Python function called when all slots are filled
 
 Current skills:
-- **weather_skill**: Collects city and date, returns mock weather data
-- **booking_skill**: Restaurant reservations (name, date, time, people count)
 - **audio_skill**: Plays audio files using pygame
 - **file_skill**: Creates text files in ./Files/ directory
-- **calendar_skill**: JSON-based calendar with add/remove/edit/list actions (currently commented out)
+- **calendar_skill_ics**: ICS-based calendar with add/remove/edit/list actions
+  - Supports full event details: title, date, time, description, duration
+  - French natural language date parsing ("demain", "14h30", etc.)
+  - RFC 5545 compliant iCalendar format
+- **email_skill**: Simulated email management with list/read/synthesize actions
+  - Stores simulated emails in ./Files/emails.json
+  - LLM-powered email summarization using local LLaMA server
+  - Pre-populated with 8 realistic French emails
 - **smalltalk**: General conversation with no slots
 
 ### Main Entry Point (examples_agent.py)
@@ -136,13 +148,14 @@ Skill `on_ready` handlers can return:
 ├── agent.py                      # Core framework
 ├── examples_agent.py             # Main entry point
 ├── agent_skills/                 # Skill implementations
-│   ├── weather_skill.py
-│   ├── booking_skill.py
 │   ├── audio_skill.py
 │   ├── file_skill.py
-│   └── calendar_skill.py
+│   ├── calendar_skill_ics.py    # ICS-based calendar (active)
+│   ├── email_skill.py           # Email management (simulated)
+│   └── calendar_skill_old.py    # Old JSON-based calendar (archived)
 ├── Files/                        # Generated files directory
-│   ├── calendar.json            # Calendar data
+│   ├── calendar.ics             # Calendar data (ICS format)
+│   ├── emails.json              # Email data (simulated)
 │   └── *.txt                    # User-created text files
 └── Scandinavianz-Morning.mp3    # Sample audio file
 ```
