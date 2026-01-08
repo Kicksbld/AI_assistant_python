@@ -1,1 +1,0 @@
-crrer une fonction en python
